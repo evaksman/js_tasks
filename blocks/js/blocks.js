@@ -47,8 +47,8 @@ colorSelector.addEventListener("change", event => {
     let colorToApply = "";
 
     if (changed) colorToApply = blockNumber % 2 != 0 ? color : "#fff";
-    else const colorToApply = blockNumber % 2 == 0 ? color : "#fff";  
-    
+    else colorToApply = blockNumber % 2 == 0 ? color : "#fff";  
+
     colorTheBlock(currentBlock, colorToApply);
   }
 });
