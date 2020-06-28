@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="myForm">
+    <div>
+      Имя:<br>
+      <input type="text" name="name" id="nameId">
+    </div>
+    <div>
+      Фамилия:<br>
+      <input type="text" name="lastName">
+    </div>
+    <div>
+      Пол:<br>
+      <select name="gender">
+        <option value="m">М</option>
+        <option value="f">Ж</option>
+      </select>
+    </div>
+    <div>
+      <input type="checkbox" name="auto">Есть автомобиль
+    </div>
+    <br>
+    <button id="sendButton">Отправить</button>
+  </form>  
+
+  <script>
+    const myForm = document.querySelector('#myForm');
+    const sendButton = document.querySelector('#sendButton');
+
+    sendButton.addEventListener('click', function(event) {
+      event.preventDefault(); // не надо перегружать страницу или посылать запросу по url в атрибуте action формы
+      // console.log(myForm.elements); // отображение всех эл-в формы
+      console.log(myForm.elements.name.value); // отображение значения текстовго поля с name=name
+      // myForm.elements.name.value = 'БАМ';
+      // myForm.elements.nameId.value = 'БАМ';
+      console.log(myForm.elements.lastName.value); // отображение значения текстовго поля с name=lastName
+      console.log(myForm.elements.gender.value); // что выбрано в выпадашке
+      console.log(myForm.elements.auto.checked); // нажат чекбокс или нет  
+      
+      if (myForm.elements.auto.checked) console.log('Есть автомобиль');
+      
+      if (myForm.elements.gender.value == 'm') console.log('Мужчина');
+      else console.log('Женщина');
+      
+    });
+  </script>
+</body>
+</html>

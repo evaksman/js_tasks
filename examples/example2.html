@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font: 16px Helvetica, sans-serif;
+      color: #444;
+    }
+
+    .item {
+      margin: 5px 0;
+    }
+
+    .item button {
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="nameInput">
+  <button id="myButton">Добавить</button>
+
+  <ul id="list"></ul>
+
+  <script>
+    const myButton = document.querySelector('#myButton');
+    const nameInput = document.querySelector('#nameInput');
+    const list = document.querySelector('#list');
+
+    myButton.addEventListener('click', function() {
+      const newItem = document.createElement('li');
+      newItem.classList.add('item'); // добавить новый класс элементу
+      newItem.textContent = nameInput.value;
+
+      const deleteButton = document.createElement('button');
+      deleteButton.textContent = "Удалить";
+
+      deleteButton.addEventListener('click', function() {
+        list.removeChild(newItem); // МОЩЬ ЗАМЫКАНИЙ - способность функции запоминать ОВ, в которой она была объявлена и пользоваться переменными из этих ОВ
+      });
+
+      newItem.appendChild(deleteButton);
+      list.appendChild(newItem);
+
+      nameInput.value = '';
+    });
+  </script>  
+</body>
+</html>

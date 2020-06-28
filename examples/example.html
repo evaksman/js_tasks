@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задачки</title>
+</head>
+
+<body>
+  <!-- <div id="container">
+      <div class="hello">Привет, loftschool!</div>
+      <a href="https://loftschool.com" class="link">Перейти на сайт</a>
+      Привет, loftschool!
+    </div>
+    <button id="myButton">Нажми меня!</button> -->
+  <input type="text" id="phone">
+  <script>
+    // const phone = document.querySelector('#phone');
+    // phone.addEventListener('keydown', function (event) {
+    //   let isDigit = false;
+    //   let isDash = false; // тире
+    //   let isControl = false; // Backspace, ArrowLeft, ArrowRight, Delete
+
+    //   if (event.key >= 0 || event.key <= 9) isDigit = true;
+    //   if (event.key == '-') isDash = true;
+    //   if (event.key == 'Backspace' || event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Delete') isControl = true;
+    //   if (!isDigit && !isDash && !isControl) event.preventDefault(); // отменить действие по умолчанию, т.е. буквы будут игнорироваться
+    //   // console.log(event.key); // можно посмотреть, что вводится с клавиатуры
+    // });
+
+      // const myButton = document.querySelector('#myButton');
+      // const container = document.querySelector('#container');
+      // // обработчик событий: имя события, функция по событию
+      // myButton.addEventListener('click', function() {
+      //   container.style.color = 'red';
+      // });
+      // container.addEventListener('click', function() {
+      //   console.log('Клик по контейнеру');
+      // });
+
+      // const elem = document.querySelector('.link'); 
+      // elem.style.color = 'red';
+      // elem.style.fontSize = '30px';
+      // elem.style.textDecoration = 'none';
+      // elem.textContent = "Перейти на этот сайт"; // заменяет текстовое содержимое
+
+      // const element = document.createElement('div'); // создаст новый DOM-элемент в памяти, но не добавляет его на страницу
+      // const container = document.querySelector('#container');
+
+      // container.appendChild(element); // добавляет новый div в конец container
+      // element.textContent = 'Текст внутри div';
+      // // а если хотим не в контейнер, а в body, то вот так:
+      // // document.body.appendChild(element);
+
+      // const element2 = document.createElement('span');
+      // element2.textContent = 'Текст внутри span';
+      // container.appendChild(element2);
+
+
+  </script>
+  <!-- <script src="example.js"></script> -->
+</body>
+
+</html>
+
+<!-- DOM (Document Object Model) (объектная модель документа) (каждый узел в документе является объектом) -->
+<!-- html, head, body, div...все внутренние теги - DOM-узлы. Бывают двух типов: элементы и текстовые узлы.
+Узлы с открывающим тегом, содержимым и закрывающим тегом - узлы типа элементы.
+Есть еще текстовые узлы: надпись "Title", "Привет, loftschool!", "Перейти на сайт".
+Узлы вкладываются друг в друга => DOM-структура или DOM-дерево.
+Когда запускаем JS-код внутри браузера, у этого кода появляется доступ в DOM-дереву.
+Поэтому мы можем обратить к любому DOM-узлу на странице. Можем создавать новые, удалять существующие, переставлять местами, менять содержимое узлов  пом. JS. -->
+
+<!-- Воспользуемся функцией document.querySelector(), которая встроена в браузер. 
+Здесь document – это объект в глобальной ОВ, он доступен автоматически, самостоятельно создавать этот объект не нужно. 
+// В качестве аргумента в document.querySelector() передаётся CSS-селектор элемента, к которому необходимо получить доступ.
+const elem = document.querySelector('#container');
+elem.style.color = 'red'; -->
+
+<!-- DOM-события; обработчики событий
+Функции-обработчики событий всегда имеют один параметр - event (объект, в котором содержится информация о событии)
